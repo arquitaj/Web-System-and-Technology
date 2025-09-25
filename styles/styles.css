@@ -1,0 +1,239 @@
+/*Base Styles */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+html, body{
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    scroll-behavior: smooth;
+}
+a{  text-decoration: none; }
+h1{ font-size: 3rem; }
+h2{ font-size: 2.5rem; }
+h3{
+    color: #555c66;
+    font-size: 1.5rem;
+}
+
+li{
+    display: inline;
+    margin-right: 1rem;
+}
+section{
+    min-width: 100vh;
+    min-height: 90vh;
+}
+button{
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+}
+nav{
+    background-color: #cce0f7;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    padding: 0 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Layout */
+.blue-section{ background-color: #e7f0fa; }
+.white-section{ background-image: url('/images/background/whitebackground.png'); }
+.flex-section{
+    display: flex;
+    justify-content: center;
+}
+.footer-section{
+    background-color: #1E3A8A;
+    min-width: 100vh;
+    min-height: 50vh;
+    padding: 5% 25%;
+}
+
+
+/* Module */
+.btn--blue { background-color: #1d4ed8; }
+.btn--gray{ background-color: #4b5563; }
+.about-me-section{ max-width: 600px; } 
+.text--blue{ color: #1E3A8A; }
+.text--height{ line-height: 2rem; }
+.top-section{ padding: 15% 15% 10% 15%; } 
+.sub-section{ padding: 5% 15% 10% 15%; }
+.text--title{ margin-top: 5%; }
+.text-intro{ max-width: 90%;}
+.list--feedback{ margin: 10% 0; }
+.author-review{ display: inline; }
+.active-card{ background-color: #BBD3EA; }
+.section--align--center{ align-items: normal; }
+.content--space-between{ justify-content: space-between; }
+.footer--right--content{ padding-left: 10%; }
+.footer--left--content{ padding-right: 17%; }
+.footer__tagline__bottom{ color: black; }
+.img--gray--icon{ filter: brightness(0) saturate(100%) invert(87%) sepia(0%) saturate(0%) hue-rotate(189deg) brightness(92%) contrast(87%); }
+.text-about-me{ 
+    color: #FFB743; 
+    margin-bottom: 2rem;
+}
+.navigation-links{
+    color: #243d74; 
+    padding-right: 1rem; 
+}
+.btn__intro{
+    border-radius: 6px;
+    padding: 10px;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    color: #fff;
+    transform: translateY(-2px);
+}
+.website-logo{
+    height: 70px;
+    width: 170px;
+}
+.profile-pic{
+    width: 20rem;
+    height: 20rem;
+}
+.text--justify{ 
+    text-align: justify;
+    margin: 1rem 0; 
+}
+.socialMedia-icon{
+    width: 26px;
+    height: 26px;
+    margin-top: 1rem;
+}
+.side-pic{
+    width: 200px;
+    height: 200px;
+    margin-right: 3rem;
+}
+.list__cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 5%;
+}
+.card{
+    max-width: 200px;
+    height: auto;
+    background-color: white;
+    text-align: center;
+    border: 1px solid #243d74;
+    border-radius: 10px;
+    padding: 20px;
+}
+.skills-image{
+    width: 50px;
+    height: 50px;
+}
+.visit-btn{
+    background-color: black;
+    height: 3rem;
+    width: 3rem;
+    padding: 10px;
+    margin-top: 5%;
+    border-radius: 50%;
+}
+.project-list{
+    display: flex;
+    margin-top: 10%;
+} 
+
+.mindjar-pic{
+    width: 8rem;
+    height: 15rem;
+    margin-right: 80px;
+}
+.wildlife-pic{
+    width: 15rem;
+    height: 10rem;
+    margin-left: 80px;
+}
+
+.not-active-card{
+    border: 0;
+    background-color: #F4F5F6;
+}
+.btn-icon{
+    width: 16px;
+    height: 16px;
+    margin-left: .5rem;
+}
+.h3--gray--text{
+    color: rgb(190, 187, 187);
+    margin-top: 3%;
+}
+.footer__col-title{
+    font-weight: bold;
+    color: white;
+}
+
+
+/* State */
+.btn--blue:hover { background-color: #2563eb; }
+.btn--gray:hover { background-color: #e2e8f0; }
+.nav-link:hover{ color: #2563eb; }
+/* For smaller screens */
+@media (max-width: 768px) {
+  .text-greetings{ margin-top:  2rem;}
+  .text--justify{ text-align: center;}
+  .mindjar-pic{ margin-right: 0; }
+  .wildlife-pic{ margin-right: 0; }
+
+  section{padding: 15% 5% 10% 5%;  }
+    .text--blue{
+        text-align: center;
+    }
+  .flex-section{
+    flex-direction: column; /* stack vertically */
+    text-align: center;     /* optional: center text */
+  }
+  .list__cards{
+    flex-direction: column; /* stack vertically */
+    text-align: center;     /* optional: center text */
+    align-items: center;
+  }
+
+  button{ 
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+  .profile-pic {
+    order: -1; /* move image above intro-text */
+    padding-top: 2rem;
+  }
+
+  .project-list{
+    flex-direction: column; /* stack vertically */
+    text-align: center;     /* optional: center text */
+    align-items: center;
+  }
+  .project--pic {
+    order: -1; /* move image above intro-text */
+    padding-top: 2rem;
+  }
+  .list--feedback{
+    flex-direction: column; /* stack vertically */
+    text-align: center;     /* optional: center text */
+    align-items: center;
+  }
+    .footer--right--content{
+        padding-left: 0%;
+        margin-top: 3%;
+    }
+    .footer--left--content{
+        order: -1;
+        padding-right: 0%;
+        margin-top: 5%;
+    }
+}
+
+/*--------------------------------------------------------------------------------------------*/
+
