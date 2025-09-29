@@ -66,4 +66,4 @@ python -m http.server
 ## Deployment
 
 The project is deployed using GitHub Pages and can be accessed through the following link:
-Web Development Personal Portfolio (GitHub Pages) 
+https://arquitaj.github.io/Web-System-and-Technology/
