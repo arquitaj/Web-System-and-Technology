@@ -45,6 +45,7 @@ cd Web-Development-Personal-Portfolio
 
 **Option 1**: Open directly in browser
 Double-click index.html
+
 **Option 2**: Run with a local server
 python -m http.server
 
