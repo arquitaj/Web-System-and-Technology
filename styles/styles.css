@@ -43,7 +43,7 @@ nav{
 
 /* Layout */
 .blue-section{ background-color: #e7f0fa; }
-.white-section{ background-image: url('/images/background/whitebackground.png'); }
+.white-section{ background-image: url('/images/icons/whitebackground.png'); }
 .flex-section{
     display: flex;
     justify-content: center;
