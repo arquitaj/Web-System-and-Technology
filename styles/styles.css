@@ -1,36 +1,38 @@
-/*Base Styles */
-*{
+/* ==========================================================================
+ 1) BASE 
+========================================================================== */
+*{  /* To Reset*/ 
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     border: 0;
 }
-html, body{
-    font-family: "Poppins", sans-serif;
+html, body{                                   /* Set Font Family Styles*/
+    font-family: "Poppins", sans-serif; 
     font-size: 1rem;
     scroll-behavior: smooth;
 }
-a{  text-decoration: none; }
-h1{ font-size: 3rem; }
-h2{ font-size: 2.5rem; }
-h3{
+a{  text-decoration: none; }                  /* Change a tag style */
+h1{ font-size: 3rem; }                        /* Change default h1 font size */
+h2{ font-size: 2.5rem; }                      /* Change default h2 font size */
+h3{                                           /* Change default h3 font size with color */
     color: #555c66;
     font-size: 1.5rem;
 }
 
-li{
+li{ 
     display: inline;
     margin-right: 1rem;
 }
-section{
+section{                                    /* Set min width and height of each section*/
     min-width: 100vh;
     min-height: 90vh;
 }
-button{
+button{                                    /* Set font family of the label of the text  */
     font-family: "Poppins", sans-serif;
     cursor: pointer;
 }
-nav{
+nav{                                      /* Change the properties of the navigation bar */
     background-color: #cce0f7;
     align-items: center;
     position: fixed;
@@ -41,14 +43,16 @@ nav{
 }
 
 
-/* Layout */
-.blue-section{ background-color: #e7f0fa; }
-.white-section{ background-image: url('../images/background/whitebackground.png'); }
-.flex-section{
+/* ==========================================================================
+2) LAYOUT 
+========================================================================== */
+.blue-section{ background-color: #e7f0fa; }                                                 /* Set color for blue section */
+.white-section{ background-image: url('../images/background/whitebackground.png'); }          /* Set Background image for white section */
+.layout-horizontal{                                                                           /* Layout the horizontal section for skill set and tech stock section*/
     display: flex;
     justify-content: center;
 }
-.footer-section{
+.footer-section{                                                                              /* To Layout the Footer Section*/
     background-color: #1E3A8A;
     min-width: 100vh;
     min-height: 50vh;
@@ -56,34 +60,36 @@ nav{
 }
 
 
-/* Module */
-.btn--blue { background-color: #1d4ed8; }
-.btn--gray{ background-color: #4b5563; }
-.about-me-section{ max-width: 600px; } 
-.text--blue{ color: #1E3A8A; }
-.text--height{ line-height: 2rem; }
-.top-section{ padding: 15% 15% 10% 15%; } 
-.sub-section{ padding: 5% 15% 10% 15%; }
-.text--title{ margin-top: 5%; }
-.text-intro{ max-width: 90%;}
-.list--feedback{ margin: 10% 0; }
-.author-review{ display: inline; }
+/* ==========================================================================
+3) MODULES 
+========================================================================= */
+.button-primary { background-color: #1d4ed8; }                                            /* Set Button to Color Blue*/
+.button-secondary{ background-color: #4b5563; }                                           /* Set Button to Color Gray*/
+.about-block{ max-width: 600px; }                                                           /* To set the maximum width of the section*/
+.text-primary{ color: #1E3A8A; }                                                          /* Set Blue text as primary color*/
+.text-height{ line-height: 2rem; }                                                          /* Text hight for paragraph tag in About Me Section*/
+.top-section{ padding: 15% 15% 10% 15%; }                                                   /* Set padding of the hero page */
+.sub-section{ padding: 5% 15% 10% 15%; }                                                    /* Set padding for section under the hero page */
+.project-title{ margin-top: 5%; }
+.text-intro{ max-width: 90%;}                                                               /* Set the maximum width of introduction text */
+.list-feedback{ margin: 10% 0; }                                                            /* Set the top margin of the feedback list*/
+.author-review{ display: inline; }                                                          
 .active-card{ background-color: #BBD3EA; }
-.section--align--center{ align-items: normal; }
-.content--space-between{ justify-content: space-between; }
-.footer--right--content{ padding-left: 10%; }
-.footer--left--content{ padding-right: 17%; }
-.footer__tagline__bottom{ color: black; }
-.img--gray--icon{ filter: brightness(0) saturate(100%) invert(87%) sepia(0%) saturate(0%) hue-rotate(189deg) brightness(92%) contrast(87%); }
-.text-about-me{ 
+.layout-align-center{ align-items: normal; }                                                /* To center the all items of the section */
+.layout-justify-between{ justify-content: space-between; }                                  /* To give equal spaces of items inside the section or layout */
+.footer-right-content{ padding-left: 10%; }                                                 /* To give left padding of the footer section */
+.footer-left-content{ padding-right: 17%; }                                                 /* To give right padding of the right section */
+.footer-heading{ color: black; }                                                          /* Set color heading of the footer to black */
+.icon-muted{ filter: brightness(0) saturate(100%) invert(87%) sepia(0%) saturate(0%) hue-rotate(189deg) brightness(92%) contrast(87%); }  /* To give color gray */
+.section-title{                                                                             /* To give color orange and padding to the About Me text*/
     color: #FFB743; 
     margin-bottom: 2rem;
 }
-.navigation-links{
+.site-navigation-item{                                                                      /* Set the navigation text link into color blue */
     color: #243d74; 
     padding-right: 1rem; 
 }
-.btn__intro{
+.button{                                                                                    /* To set-up the common properties of the button */
     border-radius: 6px;
     padding: 10px;
     margin-right: 1rem;
@@ -92,35 +98,35 @@ nav{
     color: #fff;
     transform: translateY(-2px);
 }
-.website-logo{
+.brand-logo{                                                                               /* To set fixed size of the logo */
     height: 70px;
     width: 170px;
 }
-.profile-pic{
+.profile-image{                                                                           /* To set the size of the profile image */                                                      
     width: 20rem;
     height: 20rem;
 }
-.text--justify{ 
+.text-body{                                                                               /* To justify the text */
     text-align: justify;
     margin: 1rem 0; 
 }
-.socialMedia-icon{
+.icon-social{                                                                             /* To set the size of the social media icon */
     width: 26px;
     height: 26px;
     margin-top: 1rem;
 }
-.side-pic{
+.about-illustration{                                                                      /* To set the size of the image beside about me section*/
     width: 200px;
     height: 200px;
     margin-right: 3rem;
 }
-.list__cards{
+.card-list{                                                                               /* To set the layout of the section where cards are located */
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     padding: 5%;
 }
-.card{
+.content-tile{                                                                            /* To set properties of the section where information of the cards are in */
     max-width: 200px;
     height: auto;
     background-color: white;
@@ -129,11 +135,11 @@ nav{
     border-radius: 10px;
     padding: 20px;
 }
-.skills-image{
+.image{                                                                                 /* To set the fixed size of the images in the tiles */
     width: 50px;
     height: 50px;
 }
-.visit-btn{
+.visit-btn{                                                                             /* To style the button found in the project section*/
     background-color: black;
     height: 3rem;
     width: 3rem;
@@ -141,99 +147,102 @@ nav{
     margin-top: 5%;
     border-radius: 50%;
 }
-.project-list{
+.project-list{                                                                          /* To set the properties of the project list */
     display: flex;
     margin-top: 10%;
 } 
 
-.mindjar-pic{
+.mindjar-pic{                                                                           /* To set the mindjar picture size*/
     width: 8rem;
     height: 15rem;
     margin-right: 80px;
 }
-.wildlife-pic{
+.wildlife-pic{                                                                          /* To set the wildlife picture size */
     width: 15rem;
     height: 10rem;
     margin-left: 80px;
 }
 
-.not-active-card{
+.not-active-card{                                                                      /* To set the background darker gray in the client review section*/
     border: 0;
     background-color: #F4F5F6;
 }
-.btn-icon{
+.icon{                                                                                  /* Set the fixed icon sizes */
     width: 16px;
     height: 16px;
     margin-left: .5rem;
 }
-.h3--gray--text{
+.footer-text{                                                                           /* Set the color of the text footer into gray*/
     color: rgb(190, 187, 187);
     margin-top: 3%;
 }
-.footer__col-title{
-    font-weight: bold;
+.text-white{                                                                            /* Set the color of the text footer into white for emphasizing*/
+    font-weight: bold;  
     color: white;
 }
 
 
-/* State */
-.btn--blue:hover { background-color: #2563eb; }
-.btn--gray:hover { background-color: #e2e8f0; }
+/* ==========================================================================
+4) STATE — variants, interactions, responsive rules
+========================================================================== */
+.button-primary:hover { background-color: #2563eb; }
+.button-secondary:hover { background-color: #e2e8f0; }
 .nav-link:hover{ color: #2563eb; }
-/* For smaller screens */
+
+/* Responsive breakpoints
+   1024px: reduce horizontal padding in nav
+   768px: stack rows vertically and center text
+*/
 @media (max-width: 768px) {
-  .text-greetings{ margin-top:  2rem;}
-  .text--justify{ text-align: center;}
+  .intro-kicker{ margin-top:  2rem;}
+  .text-body{ text-align: center;}
   .mindjar-pic{ margin-right: 0; }
   .wildlife-pic{ margin-right: 0; }
-
   section{padding: 15% 5% 10% 5%;  }
-    .text--blue{
+    .text-primary{
         text-align: center;
     }
-  .flex-section{
-    flex-direction: column; /* stack vertically */
-    text-align: center;     /* optional: center text */
+  .layout-horizontal{
+    flex-direction: column;                                                             /* stack vertically */
+    text-align: center;                                                                 /* optional: center text */
+    align-items: center;                                                                /* To center all items inside the layout*/
   }
-  .list__cards{
-    flex-direction: column; /* stack vertically */
-    text-align: center;     /* optional: center text */
-    align-items: center;
+  .card-list{
+    flex-direction: column;                                                             /* stack vertically */
+    text-align: center;                                                                 /* optional: center text */
+    align-items: center;                                                                /* To center all items inside the layout*/
   }
 
   button{ 
     width: 50%;
     margin-bottom: 1rem;
   }
-  .profile-pic {
-    order: -1; /* move image above intro-text */
+  .profile-image {
+    order: -1;                                                                          /* move image above intro-text */
     padding-top: 2rem;
   }
 
   .project-list{
-    flex-direction: column; /* stack vertically */
-    text-align: center;     /* optional: center text */
-    align-items: center;
+    flex-direction: column;                                                           /* stack vertically */
+    text-align: center;                                                               /* optional: center text */
+    align-items: center;                                                              /* To center all items inside the layout*/
   }
-  .project--pic {
-    order: -1; /* move image above intro-text */
+  .project-media {
+    order: -1;                                                                        /* move image above intro-text */
     padding-top: 2rem;
   }
   .list--feedback{
-    flex-direction: column; /* stack vertically */
-    text-align: center;     /* optional: center text */
-    align-items: center;
+    flex-direction: column;                                                           /* stack vertically */
+    text-align: center;                                                               /* optional: center text */
+    align-items: center;                                                              /* To center all items inside the layout*/
   }
-    .footer--right--content{
+    .footer-right-content{                                                            /* To make the right division of the footer under */                                                       
         padding-left: 0%;
         margin-top: 3%;
     }
-    .footer--left--content{
+    .footer-left-content{                                                             /* To make the left division of the footer on top */ 
         order: -1;
         padding-right: 0%;
         margin-top: 5%;
     }
 }
-
-/*--------------------------------------------------------------------------------------------*/
-
