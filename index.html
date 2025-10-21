@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Personal Portfolio</title>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="styles/styles.css">
     </head>
     <body>
@@ -158,49 +159,89 @@
             </div>
         </section>
         <!-- =========================================================
-           SECTION: Client Feedback
+            SECTION: Client Feedback (Bootstrap Carousel)
         ========================================================= -->
-        <section id="feedbacks" class="white-section sub-section">
-            <h2 class="text-primary">Clients Review</h2>
-            <div class="layout-horizontal list-feedback layout-align-center">
-                <div class="content-tile not-active-card">
-                    <blockquote>
-                        <p class="text-body">"Lorem ipsum dolor sit amet... Purus augue in morbi."</p> <!-- modify content -->
-                        <div class="author-review">
-                            <img class="image" src="images/icons/profile.png" alt=""> 
-                            <div>
-                                <cite>Lerra Dela Cruz</cite>
-                                <p>Client</p>
-                            </div>
-                        </div> 
-                    </blockquote>
+        <section id="feedbacks" class="white-section sub-section text-center">
+        <h2 class="text-primary mb-4">Clients Review</h2>
+
+        <div id="clientFeedbackCarousel"
+            class="carousel slide carousel-fade"
+            data-bs-ride="carousel"
+            data-bs-interval="4000"
+            data-bs-pause="hover">
+            
+            <!-- Dots -->
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#clientFeedbackCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#clientFeedbackCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#clientFeedbackCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <!-- Slides -->
+            <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="content-tile mx-auto p-4 shadow-sm" style="max-width:600px;">
+                <blockquote class="blockquote mb-0">
+                    <p>"Working with the team was seamless. Clear communication and on-time delivery."</p>
+                </blockquote>
+                <div class="author-review d-flex justify-content-center align-items-center mt-3">
+                    <img class="image me-2" src="images/icons/profile.png" alt="">
+                    <div>
+                    <cite>Lerra Dela Cruz</cite>
+                    <p class="text-muted mb-0">Client</p>
+                    </div>
                 </div>
-                 <div class="content-tile active-card">
-                    <blockquote>
-                        <p class="text-body">"Lorem ipsum dolor sit amet... Purus augue in morbi."</p> <!-- modify content -->
-                        <div class="author-review">
-                            <img class="image" src="images/icons/profile.png" alt=""> 
-                            <div>
-                                <cite>Danilo Giltendez</cite>
-                                <p>Client</p>
-                            </div>
-                        </div> 
-                    </blockquote>
                 </div>
-                 <div class="content-tile not-active-card">
-                    <blockquote>
-                        <p class="text-body">"Lorem ipsum dolor sit amet... Purus augue in morbi."</p> <!-- modify content -->
-                        <div class="author-review">
-                            <img class="image" src="images/icons/profile.png" alt=""> 
-                            <div>
-                                <cite> Laiza Llanto</cite>
-                                <p>Client</p>
-                            </div>
-                        </div> 
-                    </blockquote>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="content-tile mx-auto p-4 shadow-sm" style="max-width:600px;">
+                <blockquote class="blockquote mb-0">
+                    <p>"They transformed our requirements into a responsive, beautiful site. Highly recommended."</p>
+                </blockquote>
+                <div class="author-review d-flex justify-content-center align-items-center mt-3">
+                    <img class="image me-2" src="images/icons/profile.png" alt="">
+                    <div>
+                    <cite>Danilo Giltendez</cite>
+                    <p class="text-muted mb-0">Client</p>
+                    </div>
                 </div>
-          </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <div class="content-tile mx-auto p-4 shadow-sm" style="max-width:600px;">
+                <blockquote class="blockquote mb-0">
+                    <p>"Great UX choices, smooth handoff, and clear documentation. Will work with them again."</p>
+                </blockquote>
+                <div class="author-review d-flex justify-content-center align-items-center mt-3">
+                    <img class="image me-2" src="images/icons/profile.png" alt="">
+                    <div>
+                    <cite>Laiza Llanto</cite>
+                    <p class="text-muted mb-0">Client</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            </div>
+
+            <!-- Arrows -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#clientFeedbackCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#clientFeedbackCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
         </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     </body>
     <!-- =========================================================
          LAYOUT: Footer

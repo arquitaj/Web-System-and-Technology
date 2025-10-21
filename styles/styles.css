@@ -32,15 +32,33 @@ button{                                    /* Set font family of the label of th
     font-family: "Poppins", sans-serif;
     cursor: pointer;
 }
-nav{                                      /* Change the properties of the navigation bar */
-    background-color: #cce0f7;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    padding: 0 5rem;
-    display: flex;
-    justify-content: space-between;
+
+/* Change the properties of the navigation bar */
+
+/* keep nav on top of everything */
+nav { 
+  background-color: #cce0f7;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5rem;
+  height: 72px;                /* explicit height helps spacing below */
 }
+
+/* normalize the nav list so Bootstrap can't change it */
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;                   /* kill Bootstrap ul margins */
+  padding: 0;                  /* kill Bootstrap ul padding */
+  list-style: none;
+}
+nav li { display: inline-flex; }
+
 
 
 /* ==========================================================================
@@ -245,4 +263,42 @@ nav{                                      /* Change the properties of the naviga
         padding-right: 0%;
         margin-top: 5%;
     }
+}
+
+/* ===== Bootstrap Carousel tweaks (Client Feedback) ===== */
+
+/* keep fixed nav above the carousel just in case */
+nav { z-index: 10; }
+
+/* center slide content and keep the section steady in height */
+#clientFeedbackCarousel .carousel-item {
+  /* display: grid; */
+  place-items: center;
+  min-height: 260px;
+  padding: 1rem;
+}
+
+/* reuse your card look for testimonials */
+#feedbacks .content-tile {
+  background-color: #F4F5F6;
+  border: 1px solid #243d74;
+  border-radius: 10px;
+  text-align: left;
+}
+
+/* quote text tone */
+#feedbacks blockquote p { font-style: italic; color: #333; }
+
+/* author row */
+#feedbacks .author-review .image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* brand the dots + arrows with your blue */
+#clientFeedbackCarousel .carousel-indicators [data-bs-target] { background-color: #1E3A8A; }
+#clientFeedbackCarousel .carousel-control-prev-icon,
+#clientFeedbackCarousel .carousel-control-next-icon {
+  filter: invert(30%) sepia(100%) saturate(200%) hue-rotate(190deg);
 }
