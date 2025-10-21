@@ -111,8 +111,8 @@ textarea {
 .confirmation-message {
     text-align: center;
     padding: 20px;
-    color: #155724; /* Dark green text */
-    background-color: #d4edda; /* Light green background */
+    color: #155724; 
+    background-color: #d4edda; 
     border: 1px solid #c3e6cb;
     border-radius: 5px;
     margin-top: 15px;
