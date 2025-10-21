@@ -302,8 +302,8 @@ textarea {
 /* ==========================================================================
 4) STATE — variants, interactions, responsive rules
 ========================================================================== */
-.button-primary:hover { background-color: #2563eb; }
-.button-secondary:hover { background-color: #e2e8f0; }
+.button-primary:hover { background-color: #2564ebd7; }
+.button-secondary:hover { background-color: #c3cad4; }
 .nav-link:hover{ color: #2563eb; }
 
 /* Responsive breakpoints
