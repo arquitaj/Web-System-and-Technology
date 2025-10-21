@@ -5,8 +5,6 @@ const contactForm = document.querySelector('.contact-form');
 
 const confirmationMessage = document.getElementById('confirmationMessage'); 
 
-// --- Standard Modal Control ---
-
 // Open the modal
 if (contact_btn) {
     contact_btn.onclick = function() {
@@ -38,22 +36,18 @@ window.onclick = function(event) {
 
 if (contactForm && confirmationMessage) { // Ensure both elements exist before adding the listener
     contactForm.addEventListener('submit', function(event) {
-        // 1. Prevent the browser from submitting the form the default way (which causes a page refresh)
+        // Prevent the browser from submitting the form the default way (which causes a page refresh)
         event.preventDefault();
 
-        // 2. Add your logic for sending the form data here (e.g., using fetch() or XMLHttpRequest)
-        //    For this example, we'll just log a message:
-        console.log("Form submitted successfully! Closing modal...");
-
-        // 3. Hide the form and show the confirmation message
+        // Hide the form and show the confirmation message
         contactForm.style.display = 'none';
         confirmationMessage.style.display = 'block';
 
-        // 4. Reset the form fields (so they are clear if the user opens the modal again)
+        // Reset the form fields (so they are clear if the user opens the modal again)
         // ⚠️ NOTE: Form reset only works if the form is hidden, but the fields haven't been removed from the DOM.
         contactForm.reset(); 
 
-        // 5. Set a timer to close the modal after 3 seconds (3000 milliseconds)
+        // Set a timer to close the modal after 3 seconds (3000 milliseconds)
         setTimeout(function() {
             // Hide the modal completely
             modal.style.display = 'none';
@@ -63,13 +57,11 @@ if (contactForm && confirmationMessage) { // Ensure both elements exist before a
             contactForm.style.display = 'block'; 
             confirmationMessage.style.display = 'none';
             
-        }, 3000); // 🚨 ADJUSTED to 3 seconds for consistency with the comment above it.
+        }, 3000); // timeout 3000 milliseconds = 3 seconds
     });
 }
 
-
-// ----------------------------------------------------------------------
-// // Function to handle the social media navigation
+// Function to handle the social media navigation
 function setupSocialMediaLinks() {
     const socialLinks = document.querySelectorAll('ul.navigation-links li[data-url]');
 

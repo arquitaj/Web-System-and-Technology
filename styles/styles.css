@@ -183,6 +183,122 @@ nav{                                      /* Change the properties of the naviga
 }
 
 
+/* Modal/Form Module Styles */
+.modal {
+    display: none; 
+    position: fixed;     
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+/* Modal Content*/
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: auto; 
+    width: 90%; 
+    max-width: 600px; 
+    max-height: 90vh; 
+    overflow-y: auto; 
+}
+
+/* The Close Button */
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Individual form group styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.required {
+    color: #dc3545; 
+    font-weight: normal;
+}
+
+/* Input and Textarea styling */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+textarea {
+    resize: vertical; 
+}
+
+/* Submit button styling */
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Add this to your styles.css */
+.confirmation-message {
+    text-align: center;
+    padding: 20px;
+    color: #155724; 
+    background-color: #d4edda; 
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.confirmation-message h2 {
+    color: #155724;
+    margin-top: 0;
+}
+
 /* ==========================================================================
 4) STATE — variants, interactions, responsive rules
 ========================================================================== */
@@ -248,129 +364,3 @@ nav{                                      /* Change the properties of the naviga
     }
 }
 
-/* Container for the form */
-/* The Modal (background overlay) */
-.modal {
-    /* Always keep it hidden by default, as defined in script.js */
-    display: none; 
-
-    /* Position it fixed to cover the whole viewport, even when scrolling */
-    position: fixed; 
-    
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%;
-    overflow: auto; /* Enable scroll if needed */
-    
-    /* Semi-transparent black background (the backdrop) */
-    background-color: rgba(0, 0, 0, 0.5); 
-}
-
-/* Modal Content/Box (the white box that holds the form) */
-.modal-content {
-    background: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    
-    /* Center the box */
-    margin: auto; 
-    
-    /* Max width and height to ensure it fits the screen */
-    width: 90%; 
-    max-width: 600px; 
-    max-height: 90vh; /* Limits the height to 90% of the viewport height */
-    overflow-y: auto; /* Adds a scrollbar if the content exceeds max-height */
-}
-
-/* The Close Button */
-.close-btn {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close-btn:hover,
-.close-btn:focus {
-    color: #333;
-    text-decoration: none;
-}
-
-/* Individual form group styling */
-.form-group {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.required {
-    color: #dc3545; /* Red color for required asterisk */
-    font-weight: normal;
-}
-
-/* Input and Textarea styling */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; /* Ensures padding doesn't affect the overall width */
-    font-size: 16px;
-    transition: border-color 0.3s;
-}
-
-input:focus,
-textarea:focus {
-    border-color: #007bff;
-    outline: none; /* Remove default focus outline */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
-}
-
-textarea {
-    resize: vertical; /* Allow vertical resizing of the message box */
-}
-
-/* Submit button styling */
-.submit-btn {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.submit-btn:hover {
-    background-color: #0056b3;
-}
-
-/* Add this to your styles.css */
-.confirmation-message {
-    text-align: center;
-    padding: 20px;
-    color: #155724; 
-    background-color: #d4edda; 
-    border: 1px solid #c3e6cb;
-    border-radius: 5px;
-    margin-top: 15px;
-}
-
-.confirmation-message h2 {
-    color: #155724;
-    margin-top: 0;
-}
