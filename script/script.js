@@ -98,11 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Open URL in a new tab
         window.open(url, '_blank');
-
-        // Optional: for browsers that block popups sometimes, you can
-        // force focus to the new window (not always necessary):
-        // const newWin = window.open(url, '_blank');
-        // if (newWin) newWin.focus();
+        
       });
     } else {
       // Optional: debug helper: console.warn if button missing url
