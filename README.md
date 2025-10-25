@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-See live demo: https://arquitaj.github.io/Web-Development-Personal-Portfolio/
+See live demo: https://arquitaj.github.io/Web-System-and-Technology/
 
 ## Project Objective
 The primary objective of this project is to develop a **Personal Portfolio Website** that presents the skills, experiences, and accomplishments of software developers in a professional and structured manner.  
