@@ -1,6 +1,10 @@
 /* ==========================================================================
  1) BASE 
 ========================================================================== */
+:root {
+  --bs-body-font-family: 'Poppins', sans-serif;
+}
+
 *{  /* To Reset*/ 
     box-sizing: border-box;
     padding: 0;
@@ -8,16 +12,17 @@
     border: 0;
 }
 html, body{                                   /* Set Font Family Styles*/
-    font-family: "Poppins", sans-serif; 
+    font-family: "Poppins", sans-serif !important; 
     font-size: 1rem;
     scroll-behavior: smooth;
 }
 a{  text-decoration: none; }                  /* Change a tag style */
-h1{ font-size: 3rem; }                        /* Change default h1 font size */
-h2{ font-size: 2.5rem; }                      /* Change default h2 font size */
+h1{ font-size: 3rem; font-weight: bold; }                        /* Change default h1 font size */
+h2{ font-size: 2.5rem; font-weight: bold; }                      /* Change default h2 font size */
 h3{                                           /* Change default h3 font size with color */
     color: #555c66;
     font-size: 1.5rem;
+    font-weight: bold;
 }
 
 li{ 
@@ -25,36 +30,42 @@ li{
     margin-right: 1rem;
 }
 section{                                    /* Set min width and height of each section*/
-    min-width: 100vh;
     min-height: 90vh;
 }
 button{                                    /* Set font family of the label of the text  */
     font-family: "Poppins", sans-serif;
     cursor: pointer;
 }
-nav{                                      /* Change the properties of the navigation bar */
-    background-color: #cce0f7;
+/* nav{                                      Change the properties of the navigation bar */
+    /* background-color: #cce0f7;
     align-items: center;
     position: fixed;
     width: 100%;
     padding: 0 5rem;
     display: flex;
     justify-content: space-between;
+} */
+.nav-bg-color{
+    background-color: #cce0f7;
 }
-
 
 /* ==========================================================================
 2) LAYOUT 
 ========================================================================== */
 .blue-section{ background-color: #e7f0fa; }                                                 /* Set color for blue section */
-.white-section{ background-image: url('../images/background/whitebackground.png'); }          /* Set Background image for white section */
+.white-section{                                                                                /* Set Background image for white section */
+    background-image: url('../images/background/whitebackground.png'); 
+    background-size: cover;       /* Scales image to fill, may crop */
+    background-position: center;  /* Keeps image centered */
+    background-repeat: no-repeat; /* Prevents tiling */
+    min-height: 300px;
+}          
 .layout-horizontal{                                                                           /* Layout the horizontal section for skill set and tech stock section*/
     display: flex;
     justify-content: center;
 }
 .footer-section{                                                                              /* To Layout the Footer Section*/
     background-color: #1E3A8A;
-    min-width: 100vh;
     min-height: 50vh;
     padding: 5% 25%;
 }
@@ -66,10 +77,10 @@ nav{                                      /* Change the properties of the naviga
 .button-primary { background-color: #1d4ed8; }                                            /* Set Button to Color Blue*/
 .button-secondary{ background-color: #4b5563; }                                           /* Set Button to Color Gray*/
 .about-block{ max-width: 600px; }                                                           /* To set the maximum width of the section*/
-.text-primary{ color: #1E3A8A; }                                                          /* Set Blue text as primary color*/
+.text-header{ color: #1E3A8A; }                                                          /* Set Blue text as primary color*/
 .text-height{ line-height: 2rem; }                                                          /* Text hight for paragraph tag in About Me Section*/
 .top-section{ padding: 15% 15% 10% 15%; }                                                   /* Set padding of the hero page */
-.sub-section{ padding: 5% 15% 10% 15%; }                                                    /* Set padding for section under the hero page */
+.sub-section{ padding: 5% 15%; }                                                    /* Set padding for section under the hero page */
 .project-title{ margin-top: 5%; }
 .text-intro{ max-width: 90%;}                                                               /* Set the maximum width of introduction text */
 .list-feedback{ margin: 10% 0; }                                                            /* Set the top margin of the feedback list*/
@@ -79,16 +90,18 @@ nav{                                      /* Change the properties of the naviga
 .layout-justify-between{ justify-content: space-between; }                                  /* To give equal spaces of items inside the section or layout */
 .footer-right-content{ padding-left: 10%; }                                                 /* To give left padding of the footer section */
 .footer-left-content{ padding-right: 17%; }                                                 /* To give right padding of the right section */
-.footer-heading{ color: black; }                                                          /* Set color heading of the footer to black */
 .icon-muted{ filter: brightness(0) saturate(100%) invert(87%) sepia(0%) saturate(0%) hue-rotate(189deg) brightness(92%) contrast(87%); }  /* To give color gray */
 .section-title{                                                                             /* To give color orange and padding to the About Me text*/
     color: #FFB743; 
     margin-bottom: 2rem;
 }
 .site-navigation-item{                                                                      /* Set the navigation text link into color blue */
-    color: #243d74; 
-    padding-right: 1rem; 
+    padding-right: 1rem;
 }
+.nav-link{
+    color: #243d74 !important; 
+}
+
 .button{                                                                                    /* To set-up the common properties of the button */
     border-radius: 6px;
     padding: 10px;
@@ -135,6 +148,17 @@ nav{                                      /* Change the properties of the naviga
     border-radius: 10px;
     padding: 20px;
 }
+.feedback-card{
+    max-width: 100%;
+    text-align: center;
+    color: #1d4ed8;
+    border: 1px solid #243d74;
+    border-radius: 10px;
+    padding: 20%;
+}
+.carousel-item{
+    text-align: center;
+}
 .image{                                                                                 /* To set the fixed size of the images in the tiles */
     width: 50px;
     height: 50px;
@@ -145,15 +169,24 @@ nav{                                      /* Change the properties of the naviga
     width: 3rem;
     padding: 10px;
     margin-top: 5%;
-    border-radius: 50%;
+}
+.visit-btn-margin{
+    margin-left: 95%;
 }
 .project-list{                                                                          /* To set the properties of the project list */
     display: flex;
-    margin-top: 10%;
 } 
 
+.project1-list{
+    margin-bottom: 10%;
+}
 .mindjar-pic{                                                                           /* To set the mindjar picture size*/
     width: 8rem;
+    height: 15rem;
+    margin-right: 80px;
+}
+.motorph-pic{
+    width: 20rem;
     height: 15rem;
     margin-right: 80px;
 }
@@ -162,10 +195,8 @@ nav{                                      /* Change the properties of the naviga
     height: 10rem;
     margin-left: 80px;
 }
-
-.not-active-card{                                                                      /* To set the background darker gray in the client review section*/
-    border: 0;
-    background-color: #F4F5F6;
+.project-section{
+    padding: 5%;
 }
 .icon{                                                                                  /* Set the fixed icon sizes */
     width: 16px;
@@ -180,24 +211,226 @@ nav{                                      /* Change the properties of the naviga
     font-weight: bold;  
     color: white;
 }
+.clientFeedbackCarousel{
+    padding: 5%;
+}
+.text-client-review{
+    margin-bottom: 5%;
+}
 
+
+/* Modal/Form Module Styles */
+.modal {
+    display: none; 
+    position: fixed;     
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+/* Modal Content*/
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: auto; 
+    width: 90%; 
+    max-width: 600px; 
+    max-height: 90vh; 
+    overflow-y: auto; 
+}
+
+/* The Close Button */
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Individual form group styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.required {
+    color: #dc3545; 
+    font-weight: normal;
+}
+
+/* Input and Textarea styling */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+textarea {
+    resize: vertical; 
+}
+
+/* Submit button styling */
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Add this to your styles.css */
+.confirmation-message {
+    text-align: center;
+    padding: 20px;
+    color: #155724; 
+    background-color: #d4edda; 
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.confirmation-message h2 {
+    color: #155724;
+    margin-top: 0;
+}
 
 /* ==========================================================================
 4) STATE — variants, interactions, responsive rules
 ========================================================================== */
 .button-primary:hover { background-color: #2563eb; }
 .button-secondary:hover { background-color: #e2e8f0; }
-.nav-link:hover{ color: #2563eb; }
+.nav-link:hover{ color: #2563eb !important; }
+
+
+/* Always show full menu by default in the navbar section */
+    .navbar .navbar-collapse {
+      display: flex !important;
+    }
+    .navbar .navbar-toggler {
+      display: none;
+    }
+
+.navbar-toggler {
+  padding: 0.2rem 0.4rem;   /* smaller click area */
+  border: 1px solid #444;   /* thin border (optional) */
+  border-radius: 5px;
+  width: auto;              /* prevents wide box */
+  height: auto;
+}
+
+.navbar-toggler-icon {
+  width: 1.2rem;            /* reduce the icon size */
+  height: 1.2rem;
+}
+
+
+/* ===== Bootstrap Carousel tweaks (Client Feedback) ===== */
+
+/* keep fixed nav above the carousel just in case */
+nav { z-index: 10; }
+
+/* center slide content and keep the section steady in height */
+#clientFeedbackCarousel .carousel-item {
+  /* display: grid; */
+  place-items: center;
+  min-height: 260px;
+  padding: 1rem;
+}
+
+/* reuse your card look for testimonials */
+#feedbacks .content-tile {
+  background-color: #F4F5F6;
+  border: 1px solid #243d74;
+  border-radius: 10px;
+  text-align: left;
+}
+
+/* quote text tone */
+#feedbacks blockquote p { font-style: italic; color: #333; }
+
+/* author row */
+#feedbacks .author-review .image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* brand the dots + arrows with your blue */
+#clientFeedbackCarousel .carousel-indicators [data-bs-target] { background-color: #1E3A8A; }
+#clientFeedbackCarousel .carousel-control-prev-icon,
+#clientFeedbackCarousel .carousel-control-next-icon {
+  filter: invert(30%) sepia(100%) saturate(200%) hue-rotate(190deg);
+}
+
+
 
 /* Responsive breakpoints
    1024px: reduce horizontal padding in nav
    768px: stack rows vertically and center text
 */
 @media (max-width: 768px) {
+
+    /* Show Hamburger Menu in the navbar section*/
+    .navbar .navbar-collapse {
+        display: none !important;
+      }
+
+      .navbar .navbar-toggler {
+        display: block !important;
+      }
+
+      .navbar .collapse.show {
+        display: block !important;
+      }
+
+      
+  .content-tile{ max-width: 70%; }                                                      /* Change of maximum width for thhe cards */
+  .visit-btn-margin{ margin-left: 0; }                                                  /* Change of margin-left of visit button in project section */
   .intro-kicker{ margin-top:  2rem;}
   .text-body{ text-align: center;}
   .mindjar-pic{ margin-right: 0; }
-  .wildlife-pic{ margin-right: 0; }
+  .motorph-pic{ margin-right: 0; }
   section{padding: 15% 5% 10% 5%;  }
     .text-primary{
         text-align: center;
@@ -245,4 +478,10 @@ nav{                                      /* Change the properties of the naviga
         padding-right: 0%;
         margin-top: 5%;
     }
+}
+
+@media (max-width: 425px) {
+    .content-tile{ max-width: 100%; }                                                      /* Change of maximum width for thhe cards */
+    .button{ width: 100%;}
+    .text-header{ text-align: center;}
 }
