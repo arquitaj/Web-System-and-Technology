@@ -363,7 +363,9 @@ textarea {
   width: 1.2rem;            /* reduce the icon size */
   height: 1.2rem;
 }
-
+.project{
+    cursor: pointer;
+}
 
 /* ===== Bootstrap Carousel tweaks (Client Feedback) ===== */
 

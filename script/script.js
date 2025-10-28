@@ -223,7 +223,7 @@ function setupSocialMediaLinks() {
 }
 
 function setupVisitButtons() {
-  document.querySelectorAll('.visit-btn').forEach(btn => {
+  document.querySelectorAll('.project').forEach(btn => {
     const url = btn.getAttribute('data-url');
     if (url) btn.addEventListener('click', e => { e.preventDefault(); window.open(url, '_blank', 'noopener'); });
   });
@@ -234,3 +234,8 @@ document.addEventListener('DOMContentLoaded', () => {
   setupVisitButtons();
 });
 
+// ====== PROJECTS VISIT ======
+// function availableProject(){
+//   const projectLink = document.getElementById();
+
+// }
